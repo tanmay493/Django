@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.my_redirect1,name="my_redirect1"),
+    path('first/',views.first,name="first"),
+    
 ]
