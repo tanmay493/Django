@@ -6,7 +6,7 @@ def my_redirect1(req):
     return redirect('first')  #for internal redirect
 
 def first(req):
-    return render(req,'landing.html')
+    return render(req,'landing.html') 
 # ----------------------------------------
 # def my_redirect1(req):
 
