@@ -22,5 +22,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.my_redirect1,name="my_redirect1"),
     path('first/',views.first,name="first"),
+    path('my_redirect2/',views.my_redirect2,name="my_redirect2"),
+    path('second/<int:x>/<int:y>/<int:z>/',views.second,name="second"),
+
+    path('my_redirect3/',views.my_redirect3,name="my_redirect3"),
+    # path('third/<int:x>/<int:y>/<int:z>/',views.third,name="third"),
+    path('third/<str:x>/<str:y>/<str:z>/',views.third,name="third"),
+
+
     
 ]
