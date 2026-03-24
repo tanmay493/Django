@@ -3,7 +3,8 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(req):
-    return HttpResponse('welcome to django landing page')
+    # return HttpResponse('welcome to django landing page')
+    return render(req,'home.html')
 
 def dynamic_int(req,x):
     return HttpResponse(f'my no is {x}')

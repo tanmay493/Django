@@ -9,6 +9,6 @@ def home(req):
     # data='python'
     # data=['python']
     # data=('''python''' )
-    # data={'python'} # unordered datatype ko support nahi karta
-
+    # data={'python'} #set:-(unordered datatype ko support nahi karta)
+ 
     return JsonResponse(data,safe=False) # safe=false kyonki bina dictionary format show karne ke liye

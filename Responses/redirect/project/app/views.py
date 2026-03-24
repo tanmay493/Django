@@ -15,7 +15,8 @@ def first(req):
 
 def my_redirect2(req):
     # return redirect('second',1,2,3)           # *args (positional argument)
-    # data=[1,2,3]
+    
+    data=[1,2,3]
     # data=(1,2,3)
     return redirect ('second',*data)
     
@@ -28,7 +29,9 @@ def second(req,x,y,z):
 def my_redirect3(req):
     # return redirect('third',x=10,y=20,z=30)
     data={'x':'tom','y':23,'z':'btech'}
-    return redirect('third',**data)
+    return redirect('third',**data) #   *data  single star(*) diya toh sirf key print
+                                    #karega , agar **data double star(**) diya toh
+                                    #key ki value print karega
 
 def third(req,x,y,z):
     data={'p':x,'q':y,'r':z}
