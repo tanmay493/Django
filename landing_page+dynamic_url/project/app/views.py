@@ -14,3 +14,18 @@ def dynamic_str(req,x):
 
 def dynamic_slug(req,x):
     return HttpResponse(f'hello {x}')
+
+
+def login(req):
+
+    return render(req,'login.html')
+
+
+def register(req):
+
+    return render(req,'register.html')
+
+
+def contact(req):
+
+    return render(req,'contact.html')

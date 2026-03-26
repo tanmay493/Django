@@ -24,4 +24,8 @@ urlpatterns = [
     path('dynamic_int/<int:x>/',views.dynamic_int,name="dynamic_int"),
     path('dynamic_str/<str:x>/',views.dynamic_str,name="dynamic_str"),
     path('dynamic_slug/<slug:x>/',views.dynamic_slug,name="dynamic_slug"),
+    path('login/',views.login,name='login'),
+    path('register/',views.register,name='register'),
+    path('contact/',views.contact,name='contact'),
+
 ]
