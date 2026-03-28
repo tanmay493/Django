@@ -20,7 +20,8 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home,name="home"),
+    path('',views.landing,name="landing"),
+    path('home/',views.home,name='home'),
     path('dynamic_int/<int:x>/',views.dynamic_int,name="dynamic_int"),
     path('dynamic_str/<str:x>/',views.dynamic_str,name="dynamic_str"),
     path('dynamic_slug/<slug:x>/',views.dynamic_slug,name="dynamic_slug"),

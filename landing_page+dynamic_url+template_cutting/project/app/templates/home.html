@@ -1,8 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'landing(base).html' %}
 
 {% block title %}<title>home</title>{% endblock %}
 
-{% block content %}this is home page {% endblock %}
+{% block content %} 
+this is home page
+{% include 'subbase.html' %}
+
+{% endblock %}
 <h1>hello</h1>
 <a href="{% url 'register' %}">Register</a><br>
 <a href="{% url 'login' %}"><button type="submit">login</button></a><br>

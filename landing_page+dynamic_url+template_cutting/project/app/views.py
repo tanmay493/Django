@@ -2,9 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 
-def home(req):
+def landing(req):
     # return HttpResponse('welcome to django landing page')
-    return render(req,'home.html')
+    return render(req,'landing(base).html')
 
 def dynamic_int(req,x):
     return HttpResponse(f'my no is {x}')
@@ -29,3 +29,7 @@ def register(req):
 def contact(req):
 
     return render(req,'contact.html')
+
+def home(req):
+
+    return render(req,'home.html')
