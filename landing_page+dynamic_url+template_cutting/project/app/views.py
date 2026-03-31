@@ -26,9 +26,13 @@ def register(req):
     return render(req,'register.html')
 
 
+
 def contact(req):
 
     return render(req,'contact.html')
+
+def about(req):
+    return render(req,'about.html')
 
 def home(req):
 

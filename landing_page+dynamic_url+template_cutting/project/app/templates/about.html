@@ -1,0 +1,15 @@
+ {% extends 'landing(base).html' %}
+ 
+ {% load static %}
+
+ 
+ {% block css %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    
+ {% endblock css %}
+ 
+ {% block content %}
+<h1 class='home'>this is about page</h1>
+<button onclick="hi()">click</button>
+<script src="{% static 'js/index.js' %}"></script>
+ {% endblock content%}
