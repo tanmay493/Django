@@ -37,3 +37,8 @@ def about(req):
 def home(req):
 
     return render(req,'home.html')
+
+def feature(req):
+    data=[{'name':'tom', 'age':23},{'name':'john', 'age':27},{'name':'rock', 'age':45}]  
+    # data={'name':'tom', 'age':23}
+    return render (req,'feature.html',{'xyz':data})  

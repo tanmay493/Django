@@ -1,0 +1,36 @@
+{% extends 'landing(base).html' %}
+{% block content %}
+{% comment %} {{xyz}}
+{% if xyz %}
+   hello{{xyz}}
+{% elif xyz1 %}   
+     welcome {{xyz1}}
+{% else %}     
+    do not come from views
+{% endif %} {% endcomment %}
+{% if xyz %}
+
+<table border='2' cellpadding="10" >
+ 
+    <tr >
+        <th>S.no</th>
+        <th>Name</th>
+        <th>Age</th>
+
+    </tr>
+    
+    
+{% for i in xyz %} 
+
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+
+    </tr>   
+{% endfor %}
+
+</table>
+
+{% endif %}
+{% endblock content%}
