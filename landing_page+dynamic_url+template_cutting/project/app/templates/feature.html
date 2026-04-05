@@ -10,17 +10,16 @@
 {% endif %} {% endcomment %}
 {% if xyz %}
 
-<table border='2' cellpadding="10" >
- 
-    <tr >
+<table border="1" cellpadding="10">
+    <thead>
+    <tr>
         <th>S.no</th>
         <th>Name</th>
         <th>Age</th>
-
-    </tr>
-    
-    
-{% for i in xyz %} 
+    </tr> 
+    </thead>
+    <tbody>
+    {% for i in xyz %} 
 
     <tr>
         <td>{{ forloop.counter }}</td>
@@ -28,7 +27,8 @@
         <td>{{i.age}}</td>
 
     </tr>   
-{% endfor %}
+    {% endfor %}
+    </tbody>
 
 </table>
 

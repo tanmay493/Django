@@ -1,0 +1,25 @@
+{% extends 'landing(base).html' %}
+{% load static  %}
+{% block title %}<title>home</title>{% endblock %}
+
+{% block content %} 
+this is home page
+{% include 'subbase.html' %}
+<hr>
+<img src="{% static 'image/Screenshot (3).png' %}" alt="hello" height="400px" width="400px">
+
+<video controls width="320" height="240">
+  <source src="{% static 'video/first.mp4' %}" type="video/mp4">
+  
+  Your browser does not support the video tag.
+</video>
+<audio src="{% static 'audio/first.mp3' %}" controls>
+  Your browser does not support the audio element.
+</audio>
+
+
+{% endblock %}
+<h1>hello</h1>
+<a href="{% url 'register' %}">Register</a><br>
+<a href="{% url 'login' %}"><button type="submit">login</button></a><br>
+<button><a href="{% url 'contact' %}">Contact</a></button>
