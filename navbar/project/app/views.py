@@ -33,8 +33,22 @@ def feature(req):
 
 def reg_data(req):
     print('hello')
-    print(req.GET)  
+    # print(req.GET)  
     print(req.POST) 
     print(req.FILES) 
-    print(req.COOKIES)
-    print(req.META)    
+    # print(req.COOKIES)
+    # print(req.META)    
+    n = req.POST.get('name')
+    e = req.POST.get('email')
+    co = req.POST.get('contact_no.')
+    p = req.POST.get('password')
+    g = req.POST.get('gender')
+    c = req.POST.getlist('courses')
+    q = req.POST.get('qualification')
+    r = req.POST.get('resume')
+    rdt = req.POST.get('registered_date_time')
+    rt = req.POST.get('registered_time')
+    pp=req.FILES.get('profile_pic')
+    print(n,e,co,r,q,rt,rdt,p,g,c,pp,sep=',')
+
+
