@@ -64,22 +64,26 @@ this is register page
             
             <div class="mb-3">
               <label class="form-label">Name</label>
-              <input type="text" class="form-control" placeholder="Enter your name"  name="name"/>
+              <input type="text" class="form-control" placeholder="Enter your name"  name="name" value="{{n}}"/>
             </div>
-
+               <h2 style="color: red;">{{msg}}</h2>
             <div class="mb-3">
               <label class="form-label">Email</label>
-              <input type="email" class="form-control" placeholder="Enter your email" name="email"/>
+              <input type="email" class="form-control" placeholder="Enter your email" name="email" value="{{e}}"/>
             </div>
 
             <div class="mb-3">
               <label class="form-label">Contact No.</label>
               <input type="tel" class="form-control" placeholder="Enter contact number" name="contact_no."/>
             </div>
-
+              <h2 style="color: red;">{{msg2}}</h2> 
             <div class="mb-3">
               <label class="form-label">Password</label>
-              <input type="password" class="form-control" placeholder="Enter password"  name="password"/>
+              <input type="text" class="form-control" placeholder="Enter password"  name="password"/>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Confirm_Password</label>
+              <input type="password" class="form-control" placeholder="Enter confirm_password"  name="confirm_password"/>
             </div>
 
             <div class="mb-3">
@@ -97,15 +101,15 @@ this is register page
             <div class="mb-3">
               <label class="form-label d-block">Courses</label>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="html" name="courses" />
+                <input class="form-check-input" type="checkbox" id="html" name="courses" value="HTML" />
                 <label class="form-check-label" for="html">HTML</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="css" />
+                <input class="form-check-input" type="checkbox" id="css" name="courses" value="CSS" />
                 <label class="form-check-label" for="css">CSS</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="js" />
+                <input class="form-check-input" type="checkbox" id="js" name="courses" value="JavaScript" />
                 <label class="form-check-label" for="js">JavaScript</label>
               </div>
             </div>
@@ -133,7 +137,7 @@ this is register page
 
             <div class="mb-3">
               <label class="form-label">DOB</label>
-              <input type="date" class="form-control" accept="dob" />
+              <input type="date" class="form-control" accept="dob" name="dob"/>
             </div>
 
             <div class="mb-3">
