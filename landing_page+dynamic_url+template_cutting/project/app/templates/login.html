@@ -6,7 +6,21 @@
 
 
 {% block content %}
-<h1>{{msg1}}</h1>
+<h1>{{msg1}}</h1> <br>
 this is login page
+<br>
+<form action="{% url 'login_data' %}" method="POST" >
+    {% csrf_token%}
+    <label for=""> email</label>
+    <input type="text" name="email"><br>
+    {{msg1}}
+    <label for="">password</label>
+    <input type="text" name="password"><br>
+    <button type="submit">Login</button> <br>
+    <a href="">Signup</a>
+
+
+</form>
+
 {% endblock content %}
 

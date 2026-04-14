@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import Student
 # Create your views here.
@@ -78,3 +78,29 @@ def reg_data(req):
             else:
                 msg='password & confirm_password does not match'    
                 return render(req,'register.html',{'msg2':msg,'n':n,'e':e})
+
+def login_data(req):
+    if req.method=='POST':
+        e=req.POST.get('email')  
+        p=req.POST.get('password')
+        print(e,p,sep=',')
+        user=Student.objects.filter(Email=e)
+        if user:
+            user_data=Student.objects.get(Email=e)
+            save_pass=user_data.Password
+            if p==save_pass:
+                #
+                return redirect('dashboard',x=user_data.id)
+            else:
+                msg="email and password not matched"
+                return render(req,'login.html',{'msg1':msg,'email':e})
+        else:
+            msg='email id not present in db'
+            return render(req,'register.html',{'msg':msg})   
+
+def dashboard(req,x):
+    print(x)   
+    user_data=Student.objects.get(id=x)
+    data={'name':user_data.Name,'email':user_data.Email,'password':user_data.Password}
+    return render(req,'dashboard.html',{'data':data})
+
