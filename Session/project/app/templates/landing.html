@@ -1,0 +1,24 @@
+<button><a href="{% url 'set_data' %}">set_data</a></button>
+<button><a href="{% url 'get_data' %}">get_data</a></button>
+<button><a href="{% url 'delete_data' %}">delete_data</a></button>
+<br>
+<br>
+
+{% if set_data %}
+<form action="" method="POST">
+    {% csrf_token %}
+<label for="">Name</label>
+<input type="text" name="name"><br>
+<label for="">Email</label>
+<input type="text" name="email"><br>
+<label for="">Password</label>
+<input type="text" name="password"><br>
+<button type="submit">Submit</button>
+
+</form>
+<br>
+{% elif data %}
+{{data}}
+
+{% endif %}
+{{msg}}

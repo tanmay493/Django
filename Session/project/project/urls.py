@@ -17,11 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app import views
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.landing_page,name='landing_page'),
-    path('set/',views.set,name='set'),
-    path('get_cookie/',views.get_cookie,name='get_cookie'),
-    path('delete/',views.delete,name='delete')
+    path('',views.landing,name='landing'),
+    path('set_data/',views.set_data,name='set_data'),
+    path('get_data/',views.get_data,name='get_data'),
+    path('delete_data/',views.delete_data,name='delete_data')
 ]
