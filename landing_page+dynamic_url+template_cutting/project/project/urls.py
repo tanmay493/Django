@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +34,8 @@ urlpatterns = [
     path('feature/',views.feature,name='feature'),
     path('reg_data/',views.reg_data,name='reg_data'),
     path('login_data/',views.login_data,name='login_data'),
-    path('dashboard/<int:x>',views.dashboard,name='dashboard')
+    # path('dashboard/<int:x>',views.dashboard,name='dashboard')
+    path('dashboard/',views.dashboard,name='dashboard'),
+    path('logout/',views.logout,name='logout')
 
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
