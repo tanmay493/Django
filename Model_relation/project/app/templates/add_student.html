@@ -1,0 +1,28 @@
+
+<h2 style="color: red;">
+    {% for i in messages %}
+        {{i}}
+    {% endfor %}
+</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Student Name:</label>
+    <input type="text" name="name" required>
+    <br><br>
+
+    <label>Student Email:</label>
+    <input type="email" name="email" required>
+    <br><br>
+
+    <label>Student Contact:</label>
+    <input type="number" name="contact" required>
+    <br><br>
+
+    <label>Student City:</label>
+    <input type="text" name="city" required>
+    <br><br>
+
+    <button type="submit">Save Student</button>
+</form>

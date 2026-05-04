@@ -1,0 +1,31 @@
+<h2 style="color: red;">
+{% for i in messages %}
+    {{i}}
+{% endfor %}
+</h2>
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Roll No:</label>
+    <input type="text" name="roll_no" required>
+    <br><br>
+
+    <label>Alloted Date:</label>
+    <input type="date" name="alloted_date" required>
+    <br><br>
+
+    <label>Created By:</label>
+    <input type="text" name="created_by" required>
+    <br><br>
+
+    <label>Select Student:</label>
+    <select name="Student_name" required>
+        <option value="">Select</option>
+        {% for i in students %}
+            <option value="{{ i.id }}">{{ i.Stu_name }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+
+    <button type="submit">Save Roll</button>
+</form>

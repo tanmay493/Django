@@ -6,7 +6,7 @@ def home(req):
     # return JsonResponse(data)
   
     # data=10
-    # data='python'
+    data='python'
     # data=['python']
     # data=('''python''' )
     # data={'python'} #set:-(unordered datatype ko support nahi karta)

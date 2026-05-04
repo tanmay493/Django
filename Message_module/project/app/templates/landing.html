@@ -1,0 +1,8 @@
+<button><a href="{% url 'my_render' %}">my_render</a></button>
+ <button><a href="{% url 'my_redirect' %}">my_redirect</a></button> 
+ {% if messages %}
+  {% for message in messages %}
+    {{message}} <br/>
+  {% endfor %}  
+  {% endif %}
+    
