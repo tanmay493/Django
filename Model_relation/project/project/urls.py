@@ -23,4 +23,5 @@ urlpatterns = [
     path('',views.landing,name='landing'),
     path('add_student/',views.add_student,name='add_student'),
     path('add_roll/',views.add_roll,name='add_roll'),
+    path('add_department/',views.add_department,name='add_department')
 ]

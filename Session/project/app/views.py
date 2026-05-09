@@ -28,10 +28,10 @@ def get_data(req):
 
 def delete_data(req):
      if 'name' in req.session and 'email' in req.session and 'password' in req.session:
-        #  del req.session['name']
+        #  del req.session['name'] #sirf single deletion ke liye
         #  del req.session['email']
         #  del req.session['password']
-        req.session.flush() # for data deletion from server side
+        req.session.flush() # for data deletion from server side poora data ek saath delete hoga
         return render(req,'landing.html',{'msg':'data deleted'})
      
      else:
