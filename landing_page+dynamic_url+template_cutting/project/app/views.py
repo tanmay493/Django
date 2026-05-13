@@ -101,7 +101,7 @@ def login_data(req):
         else:
             msg='email id not present in db'
             return render(req,'register.html',{'msg':msg})   
-
+    return render(req,'login.html')
 @never_cache
 def dashboard(req):
     # print(x) 

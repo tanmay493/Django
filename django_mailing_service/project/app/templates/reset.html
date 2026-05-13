@@ -1,0 +1,14 @@
+<form action="{% url 'reset' %}" method="POST">
+    {% csrf_token %}
+     <label for="">email</label>
+     <input type="text" value="{{email}}" readonly name="email"><br>
+     <label for="">new_password</label>
+     <input type="text" name="new_password"><br>
+     <label for="">confirm_password</label>
+     <input type="text" name="confirm_password"><br>
+     <button type="submit">reset</button>
+     
+
+
+
+</form>

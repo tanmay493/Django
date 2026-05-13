@@ -1,0 +1,12 @@
+<form action="" method="POST">
+    {% csrf_token %}
+    <label for="">email</label>
+    <input type="text" name="email"><br>
+    <label for="">password</label>
+    <input type="text" name="password">
+    <button type="submit">login</button><br>
+    <a href="{% url 'forget_password' %}">forget password</a>
+    
+
+
+</form>

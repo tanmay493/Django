@@ -1,0 +1,12 @@
+{% for i in messages %} 
+  {{i}}
+{% endfor %}
+<form action="{% url 'verify' %}" method="POST">
+    {% csrf_token %}
+    <label for="">email</label>
+    <input type="text" value="{{email}}" readonly name="email"> <br>
+    <label for="">otp</label>
+    <input type="number" name="otp" > <br>
+    <button type="submit">verify</button>
+
+</form>
